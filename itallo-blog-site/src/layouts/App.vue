@@ -1,9 +1,9 @@
 <template>
 	<div class="layout">
 		<header class="header">
-			<strong>
-				<g-link to="/">{{ $static.metadata.siteName }}</g-link>
-			</strong>
+			<h1>
+				<g-link to="/">Itallo.</g-link>
+			</h1>
 			<nav class="nav">
 				<g-link class="nav__link" to="/">Blog</g-link>
 				<g-link class="nav__link" to="/projects/">Projetos</g-link>
@@ -11,42 +11,26 @@
 			</nav>
 		</header>
 		<slot />
+		<the-footer></the-footer>
 	</div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
 body {
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, sans-serif;
+	font-family: 'Inter', sans-serif;
 	margin: 0;
 	padding: 0;
-	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Poppins', sans-serif;
 }
 
 .layout {
-	max-width: 760px;
+	max-width: 768px;
 	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px;
-	height: 80px;
-}
-
-.nav__link {
-	margin-left: 20px;
 }
 </style>
