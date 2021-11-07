@@ -1,32 +1,48 @@
 <template>
 	<div class="layout">
-		<header class="header">
-			<h1>
-				<g-link to="/">Itallo.</g-link>
-			</h1>
-			<nav class="nav">
-				<g-link class="nav__link" to="/">Blog</g-link>
-				<g-link class="nav__link" to="/projects/">Projetos</g-link>
-				<g-link class="nav__link" to="/about">Sobre</g-link>
-			</nav>
-		</header>
+		<TheHeader />
 		<slot />
-		<the-footer></the-footer>
 	</div>
 </template>
 
+<script>
+import TheHeader from "~/components/TheHeader.vue";
+
+export default {
+	components: {
+		TheHeader,
+	},
+};
+</script>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap");
 
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: "Heebo", sans-serif;
+	font-weight: 400;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Poppins', sans-serif;
+h1 {
+	font-weight: 700;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
 .layout {
