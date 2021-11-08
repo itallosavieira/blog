@@ -14,7 +14,7 @@
 				<div class="post__info">
 					<span class="post__date"> {{ post.node.date }} </span>
 					<span class="post__sep"> | </span>
-					<span class="post__category">{{ post.node.category }}</span>
+					<span class="post__category">#{{ post.node.category }} </span>
 				</div>
 				<p class="post__resume">
 					{{ post.node.resume }}
