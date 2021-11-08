@@ -28,11 +28,11 @@ body {
 	box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2 {
 	font-weight: 700;
 }
 
-h2,
 h3,
 h4,
 h5,
